@@ -1,0 +1,14 @@
+@at-root{
+    $component: ".product__title";
+
+    #{$component}{
+        margin-bottom: 6px;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20px;
+
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

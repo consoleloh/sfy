@@ -1,0 +1,32 @@
+@at-root{
+    $component: ".section__products";
+
+    #{$component}{
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+        
+        &--default{
+            @include bp("sm", "up"){}
+            @include bp("md", "up"){}
+            @include bp("lg", "up"){}
+        }
+    }
+
+    .page--main{
+        #{$component}{
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+
+            @include bp("sm", "up"){
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+            @include bp("md", "up"){
+            }
+            @include bp("lg", "up"){}
+        }
+    }
+}

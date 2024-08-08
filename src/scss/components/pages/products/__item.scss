@@ -1,0 +1,31 @@
+@at-root{
+    $component: ".products__item";
+
+    #{$component}{
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+    
+    .page--main{
+        #{$component}{
+            position: relative;
+            padding: 19px;
+            border: 1px solid get-color(productBorder);
+            color: get-color(productContent);
+            background-color: get-color(white);
+
+            @include bp("sm", "up"){
+                display: flex;
+                flex-direction: column;
+                flex-basis: calc(100% / 2 - 8px);
+            }
+            @include bp("md", "up"){
+                flex-basis: calc(100% / 3 - 10px);
+            }
+            @include bp("lg", "up"){
+                flex-basis: calc(100% / 4 - 11.5px);
+            }
+        }
+    }
+}

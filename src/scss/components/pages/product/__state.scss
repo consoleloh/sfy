@@ -1,0 +1,76 @@
+@at-root{
+    $component: ".product__state";
+    
+    #{$component}{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 115px;
+        padding: 6px;
+        border-radius: 15px;
+        font-size: 12px;
+        line-height: 1em;
+        background-color: get-color(productState);
+
+        &--in{
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            color: get-color(productStateIn);
+
+            &:after{
+                content: "";
+                width: 10px;
+                height: 6px;
+                background-image: url(../img/icons/check.svg);
+            }
+        }
+
+        &--none{
+            display: flex;
+            align-items: center;
+            column-gap: 5px;
+            color: get-color(productStateNone);
+
+            &:after{
+                content: "";
+                width: 7px;
+                height: 8px;
+                background-image: url(../img/icons/cross.svg);
+            }
+        }
+
+        &--order{
+            color: get-color(productStateOrder);
+        }
+
+        &--lot{
+            color: get-color(productStateLot);
+        }
+
+        &--bit{
+            display: flex;
+            align-items: center;
+            column-gap: 9px;
+            color: get-color(productStateBit);
+
+            &:after{
+                content: "!";
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-shrink: 0;
+                width: 14px;
+                height: 14px;
+                border-radius: 50%;
+                font-weight: 600;
+                color: get-color(white);
+                background-color: get-color(productStateBit);
+            }
+        }
+        
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

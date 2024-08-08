@@ -1,0 +1,36 @@
+@at-root{
+    $component: ".section__title";
+
+    #{$component}{
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+
+        &--default{
+            margin-bottom: 30px;
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1em;
+            color: get-color(sectionTitle);
+
+            @include bp("sm", "up"){
+                margin-bottom: 50px;
+                font-size: 46px;
+            }
+            @include bp("md", "up"){
+                margin-bottom: 60px;
+            }
+            @include bp("lg", "up"){
+                margin-bottom: 78px;
+            }
+        }
+    }
+
+    .section--products{
+        #{$component}{
+            @include bp("sm", "up"){}
+            @include bp("md", "up"){}
+            @include bp("lg", "up"){}
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@at-root{
+    $component: ".product__control";
+
+    #{$component}{
+        width: 100%;
+        margin-top: 22px;
+
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

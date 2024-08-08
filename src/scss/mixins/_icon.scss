@@ -1,0 +1,6 @@
+@use "sass:math";
+@mixin icon($width, $height){
+	height: $height+px;
+	font-size: $height+px;
+	width: math.div($width, $height)+em;
+}

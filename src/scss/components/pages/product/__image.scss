@@ -1,0 +1,12 @@
+@at-root{
+    $component: ".product__image";
+
+    #{$component}{
+        max-width: 100%;
+        height: auto;
+
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

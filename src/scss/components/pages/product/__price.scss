@@ -1,0 +1,19 @@
+@at-root{
+    $component: ".product__price";
+
+    #{$component}{
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1em;
+
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+
+        &--old{
+            font-size: 18px;
+            text-decoration: line-through;
+            color: get-color(productOldPrice);
+        }
+    }
+}

@@ -1,0 +1,20 @@
+@at-root{
+    $component: &;
+
+    #{$component}{
+        fill: inherit !important;
+
+        path{
+            fill: inherit !important;
+        }
+
+        &--check{
+            @include icon(10, 6);
+        }
+
+        &--cross{
+            @include icon(7, 8);
+        }
+        
+    }
+}

@@ -1,0 +1,50 @@
+include ./_data
+
+section.section.-products 
+    ._container.container 
+        ._inner 
+            h1._title.--default
+                | Диваны
+
+            .products._products
+                each product in products
+                    .product._item
+                        picture._banner 
+                            source(srcset=product.img.src + ".webp" type="image/webp")
+                            img._image(src=product.img.src + ".png" width=product.img.width height=product.img.height loading="lazy" alt=product.title)
+
+                        ._content
+                            h2._title 
+                                != product.title
+
+                            p._description
+                                != product.description 
+
+                            if product.characteristics
+                                ul._characteristics 
+                                    each characteristic in product.characteristics
+                                        li._characteristic
+                                            != characteristic
+
+                            if product.stock != -1
+                                ._stock(class= productStocks[product.stock].className ? "product__stock--" + productStocks[product.stock].className : "")
+                                    != productStocks[product.stock].text
+
+                        ._bottom 
+                            ._prices 
+                                ._price 
+                                    != product.price 
+                                    | ₽
+
+                                if product.oldPrice != 0
+                                    ._price.--old 
+                                        != product.oldPrice 
+                                        | ₽
+
+                            if product.state != -1
+                                span._state(class=productStates[product.state].className ? "product__state--" + productStates[product.state].className : "")
+                                    != productStates[product.state].text
+
+                        a.button.-primary._control(href="#" onclick="return false")
+                            span._text
+                                | Заказать

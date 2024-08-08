@@ -1,0 +1,17 @@
+@at-root{
+    $component: ".product__characteristics";
+
+    #{$component}{
+        display: flex;
+        flex-direction: column;
+        row-gap: 6px;
+        margin: 0 0 20px;
+        padding-left: 24px;
+        font-size: 14px;
+        line-height: 18.2px;
+
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".product__prices";
+
+    #{$component}{
+        display: flex;
+        align-items: center;
+        column-gap: 11px;
+        
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

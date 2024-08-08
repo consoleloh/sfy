@@ -1,0 +1,18 @@
+@mixin bp($bp, $direction){
+    @if $direction == "down"{
+        @media screen and (max-width: (get-breakpoint($bp) - 1)){
+            @content;
+        }
+    }
+    @else if $direction == "up"{
+        @media screen and (min-width: get-breakpoint($bp)){
+            @content;
+        }
+    }
+}
+
+@each $key, $breakpoint in $breakpoints{
+    @if $key != default{
+        @include bp($key, $breakpoint);
+    }
+}

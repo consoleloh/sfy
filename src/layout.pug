@@ -1,0 +1,16 @@
+block settings
+    -
+        const settings = {
+            page: {
+                name: ''
+            }
+        };
+
+doctype html
+html(lang="ru")
+    head
+        include ./template-parts/common/meta
+
+    body.page(class="page--" + settings.page.name)
+        main._body
+            block content

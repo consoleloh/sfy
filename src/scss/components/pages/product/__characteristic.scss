@@ -1,0 +1,9 @@
+@at-root{
+    $component: ".product__characteristic";
+
+    #{$component}{
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

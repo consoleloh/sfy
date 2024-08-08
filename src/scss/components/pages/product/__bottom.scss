@@ -1,0 +1,15 @@
+@at-root{
+    $component: ".product__bottom";
+
+    #{$component}{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include bp("sm", "up"){
+            margin-top: auto;
+        }
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}

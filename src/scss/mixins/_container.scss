@@ -1,0 +1,5 @@
+@mixin container($breakpoint){
+	@media screen and (min-width: $breakpoint){
+		width: $breakpoint;
+	}
+}

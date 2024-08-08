@@ -1,0 +1,13 @@
+@at-root{
+    $component: ".product__banner";
+
+    #{$component}{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        @include bp("sm", "up"){}
+        @include bp("md", "up"){}
+        @include bp("lg", "up"){}
+    }
+}
